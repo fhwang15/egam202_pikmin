@@ -1,44 +1,41 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UIElements;
 
 public class PlayerCharacter : MonoBehaviour
 {
     public MovingMark nextPos;
+    public NavMeshAgent pikmin;
 
-    public NevMashAgent pikmin;
-
-    Transform targetingPos;
+ 
     Transform myPos;
-
-    float speed;
+    Vector2 pos;
 
     // Start is called before the first frame update
     void Start()
     {
-        myPos = this.transform;
+        myPos = this.gameObject.transform;
+        pos = myPos.position;
     }
 
     // Update is called once per frame
     void Update()
     {
-        targetingPos = nextPos.transform;
+        Vector2 mouseposition = Input.mousePosition;
+        Ray worldRay = Camera.main.ScreenPointToRay(mouseposition);
 
-        this.gameObject.transform.position = Vector3.MoveTowards(myPos.position, targetingPos.position, (speed / 60));
-        
 
-        //Vector3 currentPos = myPos.position;
-        //Vector3 targetPos = targetingPos.position;
+        if (Input.GetMouseButtonDown(0))
+        {
+            if (Physics.Raycast(worldRay, out RaycastHit hitinfo))
+            {
+                pikmin.SetDestination(hitinfo.point);
+            }
+        }
 
-        //Vector3 distanceBtw = currentPos - targetPos;
-
-        //if(distanceBtw.magnitude == 0)
-        //{
-        //    nextPos.move = false;
-        //}
-        
- 
     }
 
 

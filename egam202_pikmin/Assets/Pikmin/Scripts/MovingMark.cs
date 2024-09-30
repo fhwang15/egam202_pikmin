@@ -24,7 +24,6 @@ public class MovingMark : MonoBehaviour
         Vector2 mouseposition = Input.mousePosition;
         Ray worldRay = myCamera.ScreenPointToRay(mouseposition);
 
-
         if (Input.GetMouseButtonDown(0))
         {
             GetComponent<Renderer>().enabled = true;
@@ -36,6 +35,15 @@ public class MovingMark : MonoBehaviour
         }
 
         Debug.DrawRay(worldRay.origin, worldRay.direction);
+    }
+
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "pikmin")
+        {
+            GetComponent<Renderer>().enabled = false;
+        }
     }
 
 }
