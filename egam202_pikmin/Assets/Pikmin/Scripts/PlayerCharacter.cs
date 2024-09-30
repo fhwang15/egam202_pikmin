@@ -11,7 +11,7 @@ public class PlayerCharacter : MonoBehaviour
     public NavMeshAgent pikmin;
 
  
-    Transform myPos;
+    public Transform myPos;
     Vector2 pos;
 
     // Start is called before the first frame update
