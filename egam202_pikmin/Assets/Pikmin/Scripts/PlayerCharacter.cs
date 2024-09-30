@@ -20,6 +20,7 @@ public class PlayerCharacter : MonoBehaviour
 
 
     public bool activePikmin;
+    public bool PikminScore;
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +28,8 @@ public class PlayerCharacter : MonoBehaviour
         myPos = this.gameObject.transform;
         pos = myPos.position;
         activePikmin = false;
+
+        PikminScore = true;
 
         pikmin = GetComponent<NavMeshAgent>();
 
