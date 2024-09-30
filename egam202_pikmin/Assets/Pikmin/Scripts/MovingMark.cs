@@ -6,7 +6,7 @@ using UnityEngine;
 public class MovingMark : MonoBehaviour
 {
     public Camera myCamera;
-    public Transform myPosition;
+    Transform myPosition;
 
     // Start is called before the first frame update
     void Start()
