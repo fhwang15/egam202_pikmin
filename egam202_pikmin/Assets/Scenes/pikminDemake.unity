@@ -507,7 +507,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextPos: {fileID: 625859475}
   pikmin: {fileID: 299643850}
-  myPos: {fileID: 0}
+  myRender: {fileID: 299643846}
+  myPos: {fileID: 299643848}
+  activePikmin: 0
 --- !u!195 &299643850
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -742,7 +744,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextPos: {fileID: 625859475}
   pikmin: {fileID: 326318633}
-  myPos: {fileID: 0}
+  myRender: {fileID: 326318629}
+  myPos: {fileID: 326318631}
+  activePikmin: 0
 --- !u!195 &326318633
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -889,7 +893,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextPos: {fileID: 625859475}
   pikmin: {fileID: 344177499}
-  myPos: {fileID: 0}
+  myRender: {fileID: 344177494}
+  myPos: {fileID: 344177496}
+  activePikmin: 0
 --- !u!54 &344177498
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1074,6 +1080,7 @@ GameObject:
   m_Component:
   - component: {fileID: 382463387}
   - component: {fileID: 382463386}
+  - component: {fileID: 382463388}
   m_Layer: 0
   m_Name: Triangle
   m_TagString: Untagged
@@ -1123,7 +1130,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.07075471, b: 0.6525956, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1148,6 +1155,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &382463388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 382463385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f25374ea4511d93458b4833e9d0a484b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &413812393
 GameObject:
   m_ObjectHideFlags: 0
@@ -1271,7 +1290,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextPos: {fileID: 625859475}
   pikmin: {fileID: 413812399}
-  myPos: {fileID: 0}
+  myRender: {fileID: 413812395}
+  myPos: {fileID: 413812397}
+  activePikmin: 0
 --- !u!195 &413812399
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1626,7 +1647,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextPos: {fileID: 625859475}
   pikmin: {fileID: 896485975}
-  myPos: {fileID: 0}
+  myRender: {fileID: 896485971}
+  myPos: {fileID: 896485973}
+  activePikmin: 0
 --- !u!195 &896485975
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1706,7 +1729,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextPos: {fileID: 625859475}
   pikmin: {fileID: 976215226}
-  myPos: {fileID: 0}
+  myRender: {fileID: 976215229}
+  myPos: {fileID: 976215231}
+  activePikmin: 0
 --- !u!136 &976215228
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2269,7 +2294,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextPos: {fileID: 625859475}
   pikmin: {fileID: 1393074362}
-  myPos: {fileID: 0}
+  myRender: {fileID: 1393074358}
+  myPos: {fileID: 1393074360}
+  activePikmin: 0
 --- !u!195 &1393074362
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -2915,7 +2942,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextPos: {fileID: 625859475}
   pikmin: {fileID: 1754798707}
-  myPos: {fileID: 0}
+  myRender: {fileID: 1754798703}
+  myPos: {fileID: 1754798705}
+  activePikmin: 0
 --- !u!195 &1754798707
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -3940,7 +3969,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextPos: {fileID: 625859475}
   pikmin: {fileID: 2055221768}
-  myPos: {fileID: 0}
+  myRender: {fileID: 2055221764}
+  myPos: {fileID: 2055221766}
+  activePikmin: 0
 --- !u!195 &2055221768
 NavMeshAgent:
   m_ObjectHideFlags: 0
