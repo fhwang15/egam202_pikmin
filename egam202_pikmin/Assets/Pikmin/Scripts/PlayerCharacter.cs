@@ -1,15 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class PlayerCharacter : MonoBehaviour
 {
     public MovingMark nextPos;
 
+    public NevMashAgent pikmin;
+
     Transform targetingPos;
     Transform myPos;
 
-    float speed = 1f;
+    float speed;
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +25,26 @@ public class PlayerCharacter : MonoBehaviour
     {
         targetingPos = nextPos.transform;
 
-        this.gameObject.transform.position = Vector3.MoveTowards(this.gameObject.transform.position, targetingPos.transform.position, (speed/60));
+        this.gameObject.transform.position = Vector3.MoveTowards(myPos.position, targetingPos.position, (speed / 60));
         
+
+        //Vector3 currentPos = myPos.position;
+        //Vector3 targetPos = targetingPos.position;
+
+        //Vector3 distanceBtw = currentPos - targetPos;
+
+        //if(distanceBtw.magnitude == 0)
+        //{
+        //    nextPos.move = false;
+        //}
+        
+ 
     }
+
+
+    void pikminChosen()
+    {
+
+    }
+
 }
